@@ -48,11 +48,11 @@ const review = require('./route/review');
 // import category from './route/category';
 import { verifytoken } from './common/verifytoken';
 // Routing
-app.use('/', (req, res) => {
-    res.json({
-        data: 'Welcome to nodeapp'
-    });
-});
+// app.use('/', (req, res) => {
+//     res.json({
+//         data: 'Welcome to nodeapp'
+//     });
+// });
 app.use('/login', login);
 app.use('/category', category);
 app.use('/subCategory', subCategory);
