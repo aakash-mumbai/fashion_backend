@@ -69,6 +69,6 @@ app.use('/upload/:filename', (req, res) => {
 
 
 
-app.listen(process.env.PORT || 80, () => {
+app.listen(process.env.PORT || '80', () => {
     console.log('Start application', process.env.PORT)
 });
