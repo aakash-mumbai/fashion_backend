@@ -3,11 +3,11 @@ import * as express from 'express';
 import * as cors from 'cors';
 import * as bodyparser from 'body-parser';
 import * as path from 'path';
-import * as mongoose from 'mongoose';
+// import * as mongoose from 'mongoose';
 
 const app = express();
 
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true,
     useCreateIndex: true,   
