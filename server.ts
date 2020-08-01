@@ -1,7 +1,7 @@
 // require('dotenv').config({path:'.env'});
 const env = require('dotenv');
 env.config({path:'.env'});
-console.log(env);
+console.log(process.env);
 import * as express from 'express';
 import * as cors from 'cors';
 import * as bodyparser from 'body-parser';
