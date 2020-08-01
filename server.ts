@@ -48,7 +48,7 @@ const review = require('./route/review');
 // import category from './route/category';
 import { verifytoken } from './common/verifytoken';
 // Routing
-app.use('', (req, res) => {
+app.use('/', (req, res) => {
     res.json({
         data: 'Welcome to nodeapp'
     });
