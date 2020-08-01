@@ -36,35 +36,35 @@ app.use(cors());
 // });
 
 // Import file
-// const login = require('./route/login');
-// const category = require('./route/category');
-// const subCategory = require('./route/subCategory');
-// const slider = require('./route/slider');
-// const type = require('./route/type');
-// const features = require('./route/features');
-// const subscribeData = require('./route/subscribeData');
-// const rating = require('./route/rating');
-// const review = require('./route/review');
+const login = require('./route/login');
+const category = require('./route/category');
+const subCategory = require('./route/subCategory');
+const slider = require('./route/slider');
+const type = require('./route/type');
+const features = require('./route/features');
+const subscribeData = require('./route/subscribeData');
+const rating = require('./route/rating');
+const review = require('./route/review');
 // import category from './route/category';
-// import { verifytoken } from './common/verifytoken';
+import { verifytoken } from './common/verifytoken';
 // Routing
 app.use('', (req, res) => {
     res.json({
         data: 'Welcome to nodeapp'
     });
 });
-// app.use('/login', login);
-// app.use('/category', category);
-// app.use('/subCategory', subCategory);
-// app.use('/slider', slider);
-// app.use('/type', type);
-// app.use('/features', features);
-// app.use('/subscribe', subscribeData);
-// app.use('/rating', rating);
-// app.use('/review', review);
-// app.use('/upload/:filename', (req, res) => {
-//     res.sendFile(path.join(__dirname, "./upload/" + req.params.filename));
-// });
+app.use('/login', login);
+app.use('/category', category);
+app.use('/subCategory', subCategory);
+app.use('/slider', slider);
+app.use('/type', type);
+app.use('/features', features);
+app.use('/subscribe', subscribeData);
+app.use('/rating', rating);
+app.use('/review', review);
+app.use('/upload/:filename', (req, res) => {
+    res.sendFile(path.join(__dirname, "./upload/" + req.params.filename));
+});
 
 
 
