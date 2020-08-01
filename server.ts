@@ -1,4 +1,7 @@
-require('dotenv').config({path:'.env'});
+// require('dotenv').config({path:'.env'});
+const env = require('dotenv');
+env.config({path:'.env'});
+console.log(env);
 import * as express from 'express';
 import * as cors from 'cors';
 import * as bodyparser from 'body-parser';
@@ -8,6 +11,7 @@ import * as path from 'path';
 const app = express();
 
 const mongoose = require('mongoose');
+console.log('process.env.DATABASE_URL ', process.env.DATABASE_URL);
 mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true,
     useCreateIndex: true,   
