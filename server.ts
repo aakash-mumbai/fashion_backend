@@ -45,6 +45,7 @@ const features = require('./route/features');
 const subscribeData = require('./route/subscribeData');
 const rating = require('./route/rating');
 const review = require('./route/review');
+const contact = require('./route/contact');
 // import category from './route/category';
 import { verifytoken } from './common/verifytoken';
 // Routing
@@ -62,6 +63,7 @@ app.use('/features', features);
 app.use('/subscribe', subscribeData);
 app.use('/rating', rating);
 app.use('/review', review);
+app.use('/contact', contact);
 app.use('/upload/:filename', (req, res) => {
     res.sendFile(path.join(__dirname, "./upload/" + req.params.filename));
 });
